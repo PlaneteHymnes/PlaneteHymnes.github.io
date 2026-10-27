@@ -48,33 +48,6 @@ planete-hymnes/
 
 `index.html` contient le code, la mise en page, le fond de carte et une copie de secours des données : il fonctionne seul. Le dossier `logo/` sert au README et à vos supports ; le site n'en a pas besoin.
 
-## Mettre le site en ligne sur GitHub Pages
-
-1. Créez un dépôt sur GitHub, par exemple `planete-hymnes`.
-2. Déposez-y `index.html`, `README.md` et le dossier `logo/` (bouton **Add file → Upload files**).
-3. Allez dans **Settings → Pages**. Sous **Build and deployment**, choisissez **Deploy from a branch**, la branche `main` et le dossier `/ (root)`, puis **Save**.
-4. Après une à deux minutes, le site est en ligne à l'adresse `https://<votre-identifiant>.github.io/planete-hymnes/`.
-
-Le dossier `donnees/` n'a pas besoin d'être publié : il sert à créer ou recréer le Google Sheet.
-
-## Les données : le Google Sheet
-
-Le site lit l'onglet **Hymnes** du Google Sheet à chaque chargement. Le pied de page indique la source utilisée :
-
-- point vert, « Données en direct du Google Sheet » : la lecture a réussi ;
-- point gris, « Copie embarquée » : le Sheet n'a pas pu être lu, le site affiche la copie incluse dans `index.html`.
-
-### Créer ou remplacer le Google Sheet
-
-1. Importez `donnees/Hymnes_nationaux_du_monde.xlsx` dans Google Drive et ouvrez-le.
-2. **Fichier → Enregistrer au format Google Sheets** : le site ne peut pas lire un fichier Excel stocké dans Drive, seulement un vrai Google Sheet.
-3. **Partager → Accès général : « Tous les utilisateurs disposant du lien » → Lecteur**.
-4. Copiez l'identifiant du Sheet, la partie de l'adresse entre `/d/` et `/edit` :
-   `https://docs.google.com/spreadsheets/d/`**`1X5fjdG6RI3TUXjmJb3v6Wc5Mnm7AVmIjOOCmQP8bNys`**`/edit`
-5. Dans `index.html`, cherchez la ligne `const SHEET_ID =` (vers la ligne 362) et remplacez l'identifiant entre apostrophes.
-
-Le site est déjà relié au Sheet ci-dessus ; ces étapes ne servent que si vous en créez un nouveau.
-
 ### Modifier les données
 
 Chaque ligne de l'onglet **Hymnes** est un pays ou un territoire. Vous pouvez corriger librement le texte des cellules. Quelques règles pour que le site s'y retrouve :
@@ -96,14 +69,7 @@ Ne renommez pas l'onglet **Hymnes** ni les en-têtes de colonnes : le site les r
 
 ## Les paroles et leurs droits
 
-Les paroles ne sont reproduites que lorsqu'elles datent d'avant 1929 et relèvent du domaine public. Pour les autres hymnes, la fiche renvoie vers Wikipédia. Les traductions françaises sont des traductions de travail à relire avant toute publication officielle ; quand une version française officielle existe (Belgique, Suisse, Canada, Haïti), c'est elle qui figure.
-
-## Limites connues
-
-- Le site a besoin d'internet : pour lire le Google Sheet, charger les bibliothèques de carte (D3, TopoJSON), les polices et les images de drapeaux. Sans images, les drapeaux s'affichent en emoji.
-- Les infos pays (capitale, langues, monnaie…) proviennent d'un référentiel ouvert intégré au fichier ; elles ne viennent pas du Sheet. La population n'y figure pas.
-- Les mentions « à vérifier » dans la colonne Remarques signalent les informations les moins sûres.
-- L'Antarctique n'apparaît pas : il ne relève d'aucune souveraineté. Les îles subantarctiques sont rattachées à un continent selon la classification M49 de l'ONU.
+Pour la première  version, les paroles ne sont reproduites que lorsqu'elles datent d'avant 1929 et relèvent du domaine public. Pour les autres hymnes, la fiche renvoie vers Wikipédia. Les traductions françaises sont des traductions de travail à relire avant toute publication officielle ; quand une version française officielle existe (Belgique, Suisse, Canada, Haïti), c'est elle qui figure.
 
 ## Sources et crédits
 
