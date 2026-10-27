@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-5 -38 196 196" role="img" aria-label="Planète Hymnes">
+  <rect x="-5" y="-38" width="196" height="196" rx="40" fill="#16212B"/><g fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"><circle cx="50" cy="60" r="44"/><ellipse cx="50" cy="60" rx="21" ry="44"/><path d="M50 16V104M10.8 40Q50 20 89.2 40M10.8 80Q50 100 89.2 80M6 60H94"/>
+    <path stroke="#7EB1DF" d="M94 60H104V50A6 6 0 0 1 116 50V80A6 6 0 0 0 128 80V30A6 6 0 0 1 140 30V86A6 6 0 0 0 152 86V46A6 6 0 0 1 164 46V66A6 6 0 0 0 176 66V60H180"/>
+  </g>
+</svg>
